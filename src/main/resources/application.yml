@@ -5,15 +5,21 @@ spring:
     swagger-ui:
       enabled: true
       path: /swagger-ui.html
+
   application:
     name: RetailerAndProductManagement
-spring.jpa:
-  database: POSTGRESQL
-  hibernate.ddl-auto: create-drop
-  show-sql: true
-datasource:
-  platform: postgres
-  driverClassName: org.postgresql.Driver
-  url: jdbc:postgresql://localhost:5432/testDb
-  username: postgres
-  password: murad2016
+
+  jpa:
+    database: POSTGRESQL
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/testDb
+    username: postgres
+    password: murad2016
+    driver-class-name: org.postgresql.Driver
+
+server:
+  port: 8998
