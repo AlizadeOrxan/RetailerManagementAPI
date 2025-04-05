@@ -27,7 +27,7 @@ public class RetailerEntity {
     @Column(unique = true, nullable = false, name = "EMAIL")
     private String email;
 
-    @OneToMany(mappedBy = "products", cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
+    @OneToMany(mappedBy = "retailer", cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
     public List<ProductEntity> products;
 
     public void setProducts(List<ProductEntity> products) {
