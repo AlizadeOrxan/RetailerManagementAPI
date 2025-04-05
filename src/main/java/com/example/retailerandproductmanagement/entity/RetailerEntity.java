@@ -34,7 +34,7 @@ public class RetailerEntity {
         this.products = products;
         if (products != null) {
             products.forEach(product -> {
-                product.setName(this.name);
+                product.setName(this);
             });
         }
     }
